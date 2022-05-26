@@ -2,6 +2,9 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
+import './assets/font-families/Roboto-Bold.ttf';
+import './assets/font-families/Roboto-Medium.ttf';
+import './assets/font-families/Roboto-Regular.ttf';
 import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(
