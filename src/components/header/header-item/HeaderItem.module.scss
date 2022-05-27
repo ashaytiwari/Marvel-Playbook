@@ -1,0 +1,13 @@
+.headerItem {
+  font-family: 'Roboto-Medium';
+  font-size: 15px;
+  color: #fff;
+  text-decoration: none;
+  letter-spacing: 0.4px;
+  text-transform: uppercase;
+  transition: color var(--application-transition-duration) var(--application-transition-function);
+
+  &:hover {
+    color: #e62429;
+  }
+}

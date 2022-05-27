@@ -1,3 +1,5 @@
+@import 'styles';
+
 body {
   margin: 0;
   font-family: Roboto-Medium;
@@ -9,10 +11,12 @@ body {
   font-family: "Roboto-Bold";
   src: url("./assets/font-families/Roboto-Bold.ttf") format("truetype");
 }
+
 @font-face {
   font-family: "Roboto-Medium";
   src: url("./assets/font-families/Roboto-Medium.ttf") format("truetype");
 }
+
 @font-face {
   font-family: "Roboto-Regular";
   src: url("./assets/font-families/Roboto-Regular.ttf") format("truetype");

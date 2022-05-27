@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
+import './index.scss';
 import App from './App';
 import './assets/font-families/Roboto-Bold.ttf';
 import './assets/font-families/Roboto-Medium.ttf';

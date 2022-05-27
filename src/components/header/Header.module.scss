@@ -1,0 +1,63 @@
+@mixin header {
+  background-color: #202020;
+  padding: 10px 20px;
+  grid-template-columns: 100px auto;
+  column-gap: 20px;
+  align-items: center;
+}
+
+.headerMain {
+  @include header;
+  display: none;
+
+  .logoLink {
+    text-decoration: none;
+  }
+
+  .headerLogo {
+    width: 100%;
+    cursor: pointer;
+  }
+
+  .headerBody {
+    display: grid;
+    grid-auto-columns: fit-content(0px);
+    align-items: center;
+    grid-auto-flow: column;
+    justify-content: right;
+    column-gap: 20px;
+  }
+
+}
+
+.mobileHeaderMain {
+  @include header;
+  display: grid;
+
+  .headerLogo {
+    width: 100%;
+  }
+
+  .mobileHeaderBody {
+    display: grid;
+    align-items: center;
+    justify-content: right;
+
+    .mobileHeaderControl {
+      color: #fff;
+    }
+  }
+
+}
+
+@media (min-width: 768px) {
+
+  .headerMain {
+    display: grid;
+  }
+
+  .mobileHeaderMain {
+    display: none;
+  }
+
+}
