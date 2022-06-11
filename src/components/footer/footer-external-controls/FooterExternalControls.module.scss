@@ -1,0 +1,18 @@
+.footerExternalControlsMain {
+  display: grid;
+  grid-auto-rows: 15px;
+  row-gap: 15px;
+
+  .footerExternalControl {
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: 'Roboto-Regular';
+    font-size: 15px;
+    transition: color var(--application-transition-duration) var(--application-transition-function);
+
+    &:hover {
+      color: #e62429;
+    }
+  }
+}

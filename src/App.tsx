@@ -1,8 +1,9 @@
 import React from 'react';
 
-import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 import Header from 'components/header/Header';
+import Footer from 'components/footer/Footer';
 
 import Home from 'pages/home/Home';
 
@@ -13,10 +14,11 @@ function App() {
     <div>
       <Router>
 
-      <Header />
+        <Header />
         <Routes>
           <Route path={'/'} element={<Home />} />
         </Routes>
+        <Footer />
 
       </Router>
     </div>
