@@ -1,0 +1,42 @@
+.footerMarvelInsiderMain {
+  display: grid;
+  grid-auto-rows: min-content;
+  row-gap: 15px;
+  font-family: 'Roboto-Regular';
+
+  .marvelFeatureItemContainer {
+    display: grid;
+    grid-template-columns: 100px auto;
+    column-gap: 10px;
+    align-items: center;
+    cursor: pointer;
+  }
+
+  .marvelFeatureImageContainer {
+    width: 100px;
+
+    .marvelFeatureItemImage {
+      width: 100%;
+    }
+  }
+
+  .marvelFeatureItemContent {
+    display: grid;
+    grid-template-rows: auto auto;
+    row-gap: 3px;
+
+    label {
+      font-size: 15px;
+      color: #fff;
+      text-transform: uppercase;
+      letter-spacing: 0.4;
+      cursor: pointer;
+    }
+
+    span {
+      color: #767676;
+      font-size: 14px;
+    }
+  }
+
+}

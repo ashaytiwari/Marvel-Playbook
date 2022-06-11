@@ -9,6 +9,7 @@
     text-transform: uppercase;
     font-family: 'Roboto-Regular';
     font-size: 15px;
+    width: fit-content;
     transition: color var(--application-transition-duration) var(--application-transition-function);
 
     &:hover {

@@ -6,6 +6,8 @@ import MLogo from 'assets/images/logo.png';
 
 import styles from './Footer.module.scss';
 import FooterExternalControls from './footer-external-controls/FooterExternalControls';
+import MarvelFeatureControl from './footer-marvel-feature-controls/MarvelFeatureControl';
+import MarvelSocialChannels from './footer-marvel-social-channels/MarvelSocialChannels';
 
 const Footer = () => {
 
@@ -35,15 +37,42 @@ const Footer = () => {
 
   }
 
+  function renderFooterExternalControls() {
+
+    return (
+      <Grid {...gridItemAttributes}>
+        <FooterExternalControls />
+      </Grid>
+    );
+
+  }
+
+  function renderMarvelFeatureItem() {
+
+    return (
+      <Grid {...gridItemAttributes}>
+        <MarvelFeatureControl />
+      </Grid>
+    );
+  }
+
+  function renderMarvelSocialChannel() {
+
+    return (
+      <Grid {...gridItemAttributes}>
+        <MarvelSocialChannels />
+      </Grid>
+    );
+
+  }
+
   return (
     <div className={styles.footerMain}>
       <Grid {...gridContainerAttributes}>
         {renderLogoGridContainer()}
-        <Grid {...gridItemAttributes}>
-          <FooterExternalControls />
-        </Grid>
-        <Grid {...gridItemAttributes}></Grid>
-        <Grid {...gridItemAttributes}></Grid>
+        {renderFooterExternalControls()}
+        {renderMarvelFeatureItem()}
+        {renderMarvelSocialChannel()}
       </Grid>
     </div>
   );

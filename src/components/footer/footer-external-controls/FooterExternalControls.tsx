@@ -12,8 +12,9 @@ const FooterExternalControls = () => {
 
     const footerExternalControlAttributes = {
       href: item.url,
-      className: styles.footerExternalControl
-
+      className: styles.footerExternalControl,
+      target: '_blank',
+      key: index
     };
 
     return (
