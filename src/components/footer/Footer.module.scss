@@ -2,8 +2,27 @@
   background-color: #202020;
   padding: 20px;
 
+  .centeredContainer {
+    display: grid;
+    justify-content: center;
+  }
+
+  .gridContainer {
+    margin: 0;
+    width: 100%;
+  }
+}
+
+@media (min-width: 768px) {
+
   .logo {
     width: 100%;
     max-width: 150px;
   }
+
+  .centeredContainer {
+    border: none;
+    padding: 0;
+  }
+
 }

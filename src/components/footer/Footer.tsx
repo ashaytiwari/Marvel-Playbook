@@ -2,27 +2,30 @@ import React from 'react';
 
 import { Grid } from '@mui/material';
 
-import MLogo from 'assets/images/logo.png';
-
-import styles from './Footer.module.scss';
 import FooterExternalControls from './footer-external-controls/FooterExternalControls';
 import MarvelFeatureControl from './footer-marvel-feature-controls/MarvelFeatureControl';
 import MarvelSocialChannels from './footer-marvel-social-channels/MarvelSocialChannels';
+
+import MLogo from 'assets/images/logo.png';
+
+import styles from './Footer.module.scss';
 
 const Footer = () => {
 
   const gridContainerAttributes = {
     container: true,
-    spacing: 2
-  };
-
-  const gridItemAttributes = {
-    item: true,
-    xs: 12,
-    md: 3
+    spacing: 2,
+    className: styles.gridContainer
   };
 
   function renderLogoGridContainer() {
+
+    const gridItemAttributes = {
+      item: true,
+      xs: 12,
+      md: 2,
+      className: styles.centeredContainer
+    };
 
     const marvelLogoAttributes = {
       className: styles.logo,
@@ -39,6 +42,13 @@ const Footer = () => {
 
   function renderFooterExternalControls() {
 
+    const gridItemAttributes = {
+      item: true,
+      xs: 12,
+      md: 3,
+      className: styles.centeredContainer
+    };
+
     return (
       <Grid {...gridItemAttributes}>
         <FooterExternalControls />
@@ -49,6 +59,13 @@ const Footer = () => {
 
   function renderMarvelFeatureItem() {
 
+    const gridItemAttributes = {
+      item: true,
+      xs: 12,
+      md: 4,
+      className: styles.centeredContainer
+    };
+
     return (
       <Grid {...gridItemAttributes}>
         <MarvelFeatureControl />
@@ -57,6 +74,13 @@ const Footer = () => {
   }
 
   function renderMarvelSocialChannel() {
+
+    const gridItemAttributes = {
+      item: true,
+      xs: 12,
+      md: 3,
+      className: styles.centeredContainer
+    };
 
     return (
       <Grid {...gridItemAttributes}>

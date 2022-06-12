@@ -17,3 +17,16 @@
     }
   }
 }
+
+@media (max-width: 768px) {
+
+  .footerExternalControlsMain {
+    grid-auto-rows: 18px;
+    justify-content: center;
+
+    .footerExternalControl {
+      font-size: 18px;
+    }
+  }
+
+}
