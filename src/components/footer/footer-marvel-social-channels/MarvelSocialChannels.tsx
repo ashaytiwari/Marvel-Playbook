@@ -11,7 +11,8 @@ const MarvelSocialChannels = () => {
     const socialChannelControlAttributes = {
       className: styles.socialChannelControl,
       href: channel.url,
-      target: '_blank'
+      target: '_blank',
+      key: index
     };
 
     return (
