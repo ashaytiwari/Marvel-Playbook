@@ -1,0 +1,39 @@
+.homeBannerMain {
+  display: grid;
+  grid-template-columns: 35% 65%;
+  align-items: center;
+
+  .bannerContent {
+    background-color: #202020;
+    height: 100%;
+    padding: 0px 20px;
+    display: grid;
+    align-items: center;
+
+    .bannerText {
+      font-size: 55px;
+      font-family: 'Roboto-Bold';
+      color: #fff;
+    }
+
+    .typewriterContent {
+      margin: 0px;
+      color: #e62429;
+      background: linear-gradient(transparent 90%, #fdaeb1 0%);
+    }
+
+    .typewriterCursor {
+      color: #fdaeb1;
+    }
+  }
+
+  .bannerImageWrapper {
+    background-image: url('/assets/images/banner.jpg');
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 300px;
+  }
+
+}
