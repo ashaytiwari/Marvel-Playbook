@@ -67,11 +67,14 @@
     display: block;
   }
 
+  .mobileBannerView {
+    display: none;
+  }
+
   .mobileBannerImage {
     @include banner;
     background-image: url('/assets/images/mobileBanner.jpg');
     height: 200px;
-    display: none;
   }
 
 }
@@ -84,7 +87,7 @@
       display: none;
     }
 
-    .mobileBannerImage {
+    .mobileBannerView {
       display: block;
     }
 
