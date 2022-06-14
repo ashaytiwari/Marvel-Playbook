@@ -1,29 +1,54 @@
 .homeBannerMain {
-  display: grid;
-  grid-template-columns: 35% 65%;
-  align-items: center;
 
   .bannerContent {
-    background-color: #202020;
-    height: 100%;
     padding: 0px 20px;
     display: grid;
     align-items: center;
+    position: absolute;
+    width: 30%;
+    height: 100%;
+    grid-template-rows: min-content min-content min-content;
+    row-gap: 30px;
+    padding: 30px;
 
     .bannerText {
       font-size: 55px;
       font-family: 'Roboto-Bold';
       color: #fff;
+      margin: 0;
+    }
+
+    .bannerDescription {
+      font-size: 18px;
+      font-family: 'Roboto-Regular';
+      color: #fff;
+      margin: 0;
+      line-height: 25px;
+      letter-spacing: 0.5px;
+    }
+
+    .seeMoreControl {
+      text-decoration: none;
+      width: 150px;
+      height: 50px;
+      background-color: #e62429;
+      display: grid;
+      align-items: center;
+      justify-content: center;
+      border-radius: 5px;
+      color: #fff;
+      font-size: 16px;
+      text-transform: uppercase;
     }
 
     .typewriterContent {
       margin: 0px;
       color: #e62429;
-      background: linear-gradient(transparent 90%, #fdaeb1 0%);
+      background: linear-gradient(transparent 90%, #ffffff 20%);
     }
 
     .typewriterCursor {
-      color: #fdaeb1;
+      color: #fff;
     }
   }
 
@@ -33,7 +58,8 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    height: 300px;
+    height: 450px;
+    position: relative;
   }
 
 }
