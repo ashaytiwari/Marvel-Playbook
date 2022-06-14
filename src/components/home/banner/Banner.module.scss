@@ -1,3 +1,10 @@
+@mixin banner {
+  width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 .homeBannerMain {
 
   .bannerContent {
@@ -52,14 +59,56 @@
     }
   }
 
-  .bannerImageWrapper {
-    background-image: url('/assets/images/banner.jpg');
-    width: 100%;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+  .desktopBannerImageWrapper {
+    @include banner;
+    background-image: url('/assets/images/desktopBanner.jpg');
     height: 450px;
     position: relative;
+    display: block;
+  }
+
+  .mobileBannerImage {
+    @include banner;
+    background-image: url('/assets/images/mobileBanner.jpg');
+    height: 200px;
+    display: none;
+  }
+
+}
+
+@media (max-width: 820px) {
+
+  .homeBannerMain {
+
+    .desktopBannerImageWrapper {
+      display: none;
+    }
+
+    .mobileBannerImage {
+      display: block;
+    }
+
+    .bannerContent {
+      position: static;
+      background-color: #202020;
+      width: fit-content;
+      padding: 20px;
+
+      .bannerText {
+        font-size: 40px;
+        text-align: center;
+      }
+
+      .bannerDescription {
+        text-align: center;
+      }
+
+      .seeMoreControl {
+        width: 100%;
+      }
+
+    }
+
   }
 
 }

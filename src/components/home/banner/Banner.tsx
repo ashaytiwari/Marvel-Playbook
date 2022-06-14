@@ -37,12 +37,35 @@ const Banner = () => {
 
   }
 
+  function renderDesktopBannerView() {
+
+    return (
+      <div className={styles.desktopBannerImageWrapper}>
+        {renderBannerContent()}
+      </div>
+    );
+
+  }
+
+  function renderMobileBannerView() {
+
+    return (
+      <div className={styles.mobileBannerView}>
+
+        <div className={styles.mobileBannerImage}></div>
+
+        {renderBannerContent()}
+
+      </div>
+    );
+  }
+
   return (
     <div className={styles.homeBannerMain}>
 
-      <div className={styles.bannerImageWrapper}>
-        {renderBannerContent()}
-      </div>
+      {renderDesktopBannerView()}
+
+      {renderMobileBannerView()}
 
     </div>
   );
