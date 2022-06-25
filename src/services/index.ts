@@ -1,11 +1,9 @@
-import axios from 'axios/axios';
+import axios from "axios/axios";
 
 export const getSampleData = async () => {
-
-  const url = 'https://jsonplaceholder.typicode.com/posts';
+  const url = "https://jsonplaceholder.typicode.com/posts";
 
   const response = await axios.get(url);
 
-  console.log(response);
-
+  return response;
 };

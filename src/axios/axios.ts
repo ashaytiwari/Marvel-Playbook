@@ -12,7 +12,7 @@ const responseHandler = (response: any) => {
 
 const errorHandler = (error: any) => {
   const _window: Window = window;
-  console.log(error, " <<<<<<<<<<<<<<<<<<error ");
+  console.log(error, "network error ");
   _window.location = "/error";
 };
 
