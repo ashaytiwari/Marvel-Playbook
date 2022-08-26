@@ -1,3 +1,5 @@
+@import 'styles/media-query';
+
 .footerMarvelInsiderMain {
   display: grid;
   gap: 15px;
@@ -40,7 +42,7 @@
 
 }
 
-@media (max-width: 820px) {
+@include medium-screen {
 
   .footerMarvelInsiderMain {
     grid-template-columns: auto auto;
@@ -59,11 +61,23 @@
 
 }
 
-@media (max-width: 500px) {
+@include mini-screen {
 
   .footerMarvelInsiderMain {
     grid-template-columns: auto;
     gap: 15px;
+
+    .marvelFeatureItemContainer {
+      grid-template-columns: auto auto;
+      column-gap: 20px;
+    }
+
+    .marvelFeatureImageContainer {
+      display: grid;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+    }
 
     .marvelFeatureItemContent {
       label {

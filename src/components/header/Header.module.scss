@@ -1,3 +1,5 @@
+@import 'styles/media-query';
+
 @mixin header {
   background-color: #202020;
   padding: 10px 20px;
@@ -9,7 +11,7 @@
 
 .headerMain {
   @include header;
-  display: none;
+  display: grid;
 
   .logoLink {
     text-decoration: none;
@@ -33,7 +35,7 @@
 
 .mobileHeaderMain {
   @include header;
-  display: grid;
+  display: none;
 
   .headerLogo {
     width: 100%;
@@ -51,14 +53,14 @@
 
 }
 
-@media (min-width: 820px) {
+@include medium-screen {
 
   .headerMain {
-    display: grid;
+    display: none;
   }
 
   .mobileHeaderMain {
-    display: none;
+    display: grid;
   }
 
 }

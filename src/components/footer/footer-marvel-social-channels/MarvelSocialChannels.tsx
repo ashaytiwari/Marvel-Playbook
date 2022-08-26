@@ -1,6 +1,8 @@
-import marvelSocialChannelsLinks from 'assets/data/footer-marvel-social-channels';
-import { IFooterSocialChannel } from 'interfaces/footer';
 import React from 'react';
+
+import { IFooterSocialChannel } from 'interfaces/footer';
+
+import marvelSocialChannelsLinks from 'assets/data/footer-marvel-social-channels';
 
 import styles from './MarvelSocialChannels.module.scss';
 

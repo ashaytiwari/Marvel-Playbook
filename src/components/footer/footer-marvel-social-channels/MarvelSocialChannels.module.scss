@@ -1,3 +1,5 @@
+@import 'styles/media-query';
+
 .marvelSocialChannelsMain {
   display: grid;
   grid-template-rows: 15px auto;
@@ -41,9 +43,13 @@
 
 }
 
-@media (max-width: 820px) {
+@include medium-screen {
 
   .marvelSocialChannelsMain {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+
     label {
       font-size: 18px;
     }
