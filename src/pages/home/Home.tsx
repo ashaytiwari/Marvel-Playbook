@@ -7,6 +7,7 @@ import Characters from 'components/home/characters/Characters';
 import styles from './Home.module.scss';
 
 function Home() {
+
   return (
     <div className={styles.container}>
       <Banner />
@@ -14,6 +15,7 @@ function Home() {
       <Characters />
     </div>
   );
+
 }
 
 export default Home;

@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 
 import { useAppDispatch } from 'hooks/useAppDispatch';
 import { setSampleData } from 'redux/slices/sample.slice';
-import { getSampleData } from 'services';
+import { getCharacters, getSampleData } from 'services';
 
 import styles from './Characters.module.scss';
 import { useAppSelector } from 'hooks/useAppSelector';
@@ -15,8 +15,9 @@ const Characters = () => {
   console.log(sampleData);
 
   useEffect(() => {
-    getSampleData().then((data) => {
-      dispatch(setSampleData(data.data));
+    getCharacters().then((data) => {
+      console.log(data);
+      // dispatch(setSampleData(data.data));
     });
   }, [dispatch]);
 

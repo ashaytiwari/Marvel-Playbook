@@ -11,9 +11,8 @@ const responseHandler = (response: any) => {
 };
 
 const errorHandler = (error: any) => {
-  const _window: Window = window;
+  // eslint-disable-next-line no-console
   console.log(error, "network error ");
-  _window.location = "/error";
 };
 
 customAxios.interceptors.request.use(
