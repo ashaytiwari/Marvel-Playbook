@@ -23,14 +23,14 @@
     .bannerText {
       font-size: 55px;
       font-family: 'Roboto-Bold';
-      color: #fff;
+      color: var(--application-primary-text-color);
       margin: 0;
     }
 
     .bannerDescription {
       font-size: 18px;
       font-family: 'Roboto-Regular';
-      color: #fff;
+      color: var(--application-primary-text-color);
       margin: 0;
       line-height: 25px;
       letter-spacing: 0.5px;
@@ -40,24 +40,24 @@
       text-decoration: none;
       width: 150px;
       height: 50px;
-      background-color: #e62429;
+      background-color: var(--application-primary-color);
       display: grid;
       align-items: center;
       justify-content: center;
       border-radius: 5px;
-      color: #fff;
+      color: var(--application-primary-text-color);
       font-size: 16px;
       text-transform: uppercase;
     }
 
     .typewriterContent {
       margin: 0px;
-      color: #e62429;
-      background: linear-gradient(transparent 90%, #ffffff 20%);
+      color: var(--application-primary-color);
+      background: linear-gradient(transparent 90%, var(--application-primary-text-color) 20%);
     }
 
     .typewriterCursor {
-      color: #fff;
+      color: var(--application-primary-text-color);
     }
   }
 
@@ -95,7 +95,7 @@
 
     .bannerContent {
       position: static;
-      background-color: #202020;
+      background-color: var(--application-secondary-color);
       width: calc(100% - 40px);
       padding: 20px;
 

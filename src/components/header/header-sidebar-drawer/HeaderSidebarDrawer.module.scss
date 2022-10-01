@@ -12,7 +12,7 @@
     }
 
     .closeControl {
-      color: #fff;
+      color: var(--application-primary-text-color);
     }
   }
 
@@ -26,14 +26,14 @@
       cursor: pointer;
       font-family: 'Roboto-Medium';
       font-size: 18px;
-      color: #fff;
+      color: var(--application-primary-text-color);
       text-decoration: none;
       letter-spacing: 0.6px;
       text-transform: uppercase;
       transition: color var(--application-transition-duration) var(--application-transition-function);
 
       &:hover {
-        color: #e62429;
+        color: var(--application-primary-color);
       }
     }
   }

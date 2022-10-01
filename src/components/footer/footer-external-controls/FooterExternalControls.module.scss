@@ -6,7 +6,7 @@
   row-gap: 15px;
 
   .footerExternalControl {
-    color: #fff;
+    color: var(--application-primary-text-color);
     text-decoration: none;
     text-transform: uppercase;
     font-family: 'Roboto-Regular';
@@ -15,7 +15,7 @@
     transition: color var(--application-transition-duration) var(--application-transition-function);
 
     &:hover {
-      color: #e62429;
+      color: var(--application-primary-color);
     }
   }
 }

@@ -28,14 +28,14 @@
 
     label {
       font-size: 15px;
-      color: #fff;
+      color: var(--application-primary-text-color);
       text-transform: uppercase;
       letter-spacing: 0.4;
       cursor: pointer;
     }
 
     span {
-      color: #767676;
+      color: var(--application-tertiary-color);
       font-size: 14px;
     }
   }
