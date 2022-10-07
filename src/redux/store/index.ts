@@ -1,10 +1,10 @@
 import { configureStore } from "@reduxjs/toolkit";
 
-import sampleReducer from "redux/slices/sample.slice";
+import applicationSlice from "redux/slices/application.slice";
 
 export const store = configureStore({
   reducer: {
-    sample: sampleReducer
+    application: applicationSlice
   }
 });
 

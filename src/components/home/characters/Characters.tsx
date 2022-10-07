@@ -1,30 +1,92 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
+
+import { useSnackbar } from 'notistack';
+import { Link } from 'react-router-dom';
 
 import { useAppDispatch } from 'hooks/useAppDispatch';
-import { setSampleData } from 'redux/slices/sample.slice';
-import { getCharacters, getSampleData } from 'services';
+
+import { getCharacters } from 'services';
+import messages from 'messages';
+
+import { setCharacters } from 'redux/slices/application.slice';
+
+import CharactersList from './characters-list/CharactersList';
 
 import styles from './Characters.module.scss';
-import { useAppSelector } from 'hooks/useAppSelector';
 
 const Characters = () => {
 
+  const { enqueueSnackbar } = useSnackbar();
   const dispatch = useAppDispatch();
-  const sampleData = useAppSelector((state) => state.sample.data);
 
-  console.log(sampleData);
+  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
-    getCharacters().then((data) => {
-      console.log(data);
-      // dispatch(setSampleData(data.data));
-    });
-  }, [dispatch]);
+
+    initialize();
+
+    return () => {
+      unmountReduxState();
+    };
+
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
+  function unmountReduxState() {
+
+    dispatch(setCharacters([]));
+
+  }
+
+  function initialize() {
+
+    loadCharacters();
+
+  }
+
+  async function loadCharacters() {
+
+    try {
+
+      setLoading(true);
+
+      const response = await getCharacters(5, 0);
+
+      const characters: [] = response.data.data.results;
+
+      dispatch(setCharacters(characters));
+
+      setLoading(false);
+
+    } catch (exception) {
+
+      setLoading(false);
+      enqueueSnackbar(messages.somethingWentWrong, { variant: 'error' });
+
+    }
+
+  }
+
+  function renderCharacterSectionHeading() {
+
+    const seeMoreControlAttributes = {
+      to: '/characters',
+      className: styles.seeMoreControl
+    };
+
+    return (
+      <div className={styles.characterSectionHeader}>
+        <h5 className={styles.charactersTitle}>Characters</h5>
+        <Link {...seeMoreControlAttributes}>See more</Link>
+      </div>
+    );
+
+  }
 
   return (
     <div className={styles.charactersMain}>
-      <h5 className={styles.charactersTitle}>Characters</h5>
-
+      {renderCharacterSectionHeading()}
+      <CharactersList loading={loading} />
     </div>
   );
 };

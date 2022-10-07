@@ -7,3 +7,8 @@ export const generateMD5Hash = (_data: string) => {
 
   return hash;
 };
+
+export const createImageURL = (url: string, extension: string) => {
+  const imageURL = `${url}.${extension}`;
+  return imageURL;
+};

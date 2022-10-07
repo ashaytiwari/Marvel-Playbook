@@ -1,8 +1,23 @@
 .charactersMain {
   padding: 20px;
   display: grid;
-  grid-template-columns: 25px auto;
-  column-gap: 20px;
+  grid-template-rows: 25px min-content;
+  row-gap: 20px;
+
+  .characterSectionHeader {
+    display: grid;
+    grid-template-columns: max-content max-content;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .seeMoreControl {
+    color: var(--application-primary-color);
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 15px;
+    letter-spacing: 0.5px;
+  }
 
   .charactersTitle {
     font-size: 25px;
