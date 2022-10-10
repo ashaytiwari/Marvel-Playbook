@@ -1,6 +1,7 @@
 import React from 'react';
 
-import AdvertisementImage from 'assets/images/advertisement.jpeg';
+import desktopAdvertisementImage from 'assets/images/desktop-advertisement.jpeg';
+import mobileAdvertisementImage from 'assets/images/mobile-advertisement.jpeg';
 
 import styles from './Advertisement.module.scss';
 
@@ -14,15 +15,22 @@ const Advertisement = () => {
 
   }
 
-  const advertisementImageAttributes = {
-    src: AdvertisementImage,
-    className: styles.advertisementImage,
+  const desktopAdvertisementImageAttributes = {
+    src: desktopAdvertisementImage,
+    className: styles.desktopAdvertisementImage,
+    onClick: handleAdvertisementClick
+  };
+
+  const mobileAdvertisementImageAttributes = {
+    src: mobileAdvertisementImage,
+    className: styles.mobileAdvertisementImage,
     onClick: handleAdvertisementClick
   };
 
   return (
     <div className={styles.advertisementMain}>
-      <img {...advertisementImageAttributes} alt="advertisement" />
+      <img {...desktopAdvertisementImageAttributes} alt="advertisement" />
+      <img {...mobileAdvertisementImageAttributes} alt="advertisement" />
     </div>
   );
 };

@@ -1,12 +1,38 @@
+@import 'styles/media-query';
+
 .advertisementMain {
   padding: 20px;
   display: grid;
   align-items: center;
   justify-content: center;
 
-  .advertisementImage {
+  .desktopAdvertisementImage {
+    width: 100%;
+    cursor: pointer;
+    border-radius: 5px;
+    display: block;
+  }
+
+  .mobileAdvertisementImage {
+    display: none;
     width: 100%;
     cursor: pointer;
     border-radius: 5px;
   }
+
+}
+
+@include small-screen {
+
+  .advertisementMain {
+
+    .desktopAdvertisementImage {
+      display: none;
+    }
+
+    .mobileAdvertisementImage {
+      display: block;
+    }
+  }
+
 }
