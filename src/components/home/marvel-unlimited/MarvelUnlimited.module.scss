@@ -1,0 +1,105 @@
+@import 'styles/media-query';
+
+@mixin image-wrapper {
+  width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url('/assets/images/marvel-unlimited-section.jpg');
+}
+
+#marvelUnlimitedMain {
+
+  .desktopContent {
+    @include image-wrapper;
+    height: 450px;
+    position: relative;
+    display: block;
+  }
+
+  .mobileContentView {
+    display: none;
+  }
+
+  .marvelUnlimitedContent {
+    display: grid;
+    align-items: center;
+    position: absolute;
+    width: 30%;
+    height: calc(100% - 200px); //reducing top-bottom padding (30 + 30 = 60px) from 100% height
+    grid-template-rows: min-content min-content min-content;
+    row-gap: 30px;
+    padding: 100px 30px;
+  }
+
+  .marvelUnlimitedHeading {
+    font-family: 'Roboto-Bold';
+    color: var(--application-primary-text-color);
+    margin: 0;
+    font-size: 42px;
+  }
+
+  .marvelUnlimitedLabel {
+    font-size: 18px;
+    font-family: 'Roboto-Regular';
+    color: var(--application-primary-text-color);
+    margin: 0;
+    line-height: 25px;
+    letter-spacing: 0.5px;
+  }
+
+  .marvelUnlimitedControl {
+    text-decoration: none;
+    width: 250px;
+    height: 50px;
+    background-color: var(--application-primary-color);
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    color: var(--application-primary-text-color);
+    font-size: 16px;
+    text-transform: uppercase;
+    letter-spacing: 0.6px;
+  }
+
+  .mobileImageWrapper {
+    @include image-wrapper;
+    height: 200px;
+  }
+
+}
+
+@include medium-screen {
+  #marvelUnlimitedMain {
+
+    .desktopContent {
+      display: none;
+    }
+
+    .mobileContentView {
+      display: block;
+    }
+
+    .marvelUnlimitedContent {
+      position: static;
+      background-color: var(--application-secondary-color);
+      width: calc(100% - 40px);
+      padding: 20px;
+    }
+
+    .marvelUnlimitedHeading {
+      font-size: 35px;
+      text-align: center;
+    }
+
+    .marvelUnlimitedLabel {
+      text-align: center;
+    }
+
+    .marvelUnlimitedControl {
+      width: 100%;
+    }
+
+  }
+}

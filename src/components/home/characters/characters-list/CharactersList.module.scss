@@ -9,8 +9,8 @@
 
   .characterItem {
     background-color: var(--application-secondary-color);
-    border-bottom-right-radius: 10px;
-    border-bottom-left-radius: 10px;
+    border-radius: 10px;
+    overflow: hidden;
     cursor: pointer;
     transition: background-color var(--application-transition-duration) linear;
 
