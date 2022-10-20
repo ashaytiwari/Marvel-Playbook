@@ -1,0 +1,29 @@
+.comicsMain {
+  padding: 20px;
+  display: grid;
+  grid-template-rows: 25px min-content;
+  row-gap: 20px;
+
+  .comicsSectionHeader {
+    display: grid;
+    grid-template-columns: max-content max-content;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .seeMoreControl {
+    color: var(--application-primary-color);
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 15px;
+    letter-spacing: 0.5px;
+  }
+
+  .comicsTitle {
+    font-size: 25px;
+    font-family: 'Roboto-Bold';
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin: 0;
+  }
+}

@@ -22,3 +22,15 @@ export const getCharacters = async (limit: number, page: number) => {
 
   return response;
 };
+
+export const getComics = async (limit: number, page: number) => {
+  const { timestamp, hash } = generateParamsForMarvelApis();
+
+  const offset = limit * page;
+
+  const url = `https://gateway.marvel.com:443/v1/public/comics?ts=${timestamp}&apikey=${PUBLIC_KEY}&hash=${hash}&limit=${limit}&offset=${offset}`;
+
+  const response = await axios.get(url);
+
+  return response;
+};
