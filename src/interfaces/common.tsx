@@ -5,3 +5,9 @@ export interface IToastMessageProps {
 export interface ISpinnerProps {
   fullscreen?: boolean
 }
+
+export interface IApplicationCardProps {
+  imagePath: string,
+  title: string,
+  onClick: () => void
+}

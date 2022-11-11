@@ -7,6 +7,7 @@ import { IHomeComicsSectionProps } from 'interfaces/home';
 import { createImageURL } from 'utilities';
 
 import HomeSectionSkeleton from 'components/generics/skeleton-loaders/home-section-skeleton/HomeSectionSkeleton';
+import ApplicationCard from 'components/generics/application-card/ApplicationCard';
 
 import styles from './ComicsList.module.scss';
 
@@ -19,27 +20,16 @@ const ComicsList: React.FC<IHomeComicsSectionProps> = (props) => {
   function renderComics(comic: any) {
 
     const thumbnail = comic.thumbnail;
+    const imagePath = createImageURL(thumbnail.path, thumbnail.extension);
 
-    const comicItemAttributes = {
-      className: styles.comicItem,
-      key: comic.id
+    const applicationCardAttributes = {
+      imagePath,
+      title: comic.title,
+      key: comic.id,
+      onClick() { }
     };
 
-    const comicImageAttributes = {
-      src: createImageURL(thumbnail.path, thumbnail.extension),
-      className: styles.comicImage
-    };
-
-    return (
-      <div {...comicItemAttributes}>
-        <div className={styles.comicImageContainer}>
-          <img {...comicImageAttributes} alt='comic' />
-        </div>
-        <div className={styles.comicItemContent}>
-          <h4 className={styles.comicName}>{comic.title}</h4>
-        </div>
-      </div>
-    );
+    return <ApplicationCard {...applicationCardAttributes} />;
 
   }
 

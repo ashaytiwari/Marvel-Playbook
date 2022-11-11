@@ -7,6 +7,7 @@ import { IHomeCharacterSectionProps } from 'interfaces/home';
 import { createImageURL } from 'utilities';
 
 import HomeSectionSkeleton from 'components/generics/skeleton-loaders/home-section-skeleton/HomeSectionSkeleton';
+import ApplicationCard from 'components/generics/application-card/ApplicationCard';
 
 import styles from './CharactersList.module.scss';
 
@@ -19,27 +20,16 @@ const CharactersList: React.FC<IHomeCharacterSectionProps> = (props) => {
   function renderCharacter(character: any) {
 
     const thumbnail = character.thumbnail;
+    const imagePath = createImageURL(thumbnail.path, thumbnail.extension);
 
-    const characterItemAttributes = {
-      className: styles.characterItem,
-      key: character.id
+    const applicationCardAttributes = {
+      imagePath,
+      title: character.name,
+      key: character.id,
+      onClick() { }
     };
 
-    const characterAttributes = {
-      src: createImageURL(thumbnail.path, thumbnail.extension),
-      className: styles.characterImage
-    };
-
-    return (
-      <div {...characterItemAttributes}>
-        <div className={styles.characterImageContainer}>
-          <img {...characterAttributes} alt='character' />
-        </div>
-        <div className={styles.characterItemContent}>
-          <h4 className={styles.characterName}>{character.name}</h4>
-        </div>
-      </div>
-    );
+    return <ApplicationCard {...applicationCardAttributes} />;
 
   }
 
