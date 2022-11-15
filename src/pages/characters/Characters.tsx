@@ -15,9 +15,20 @@ function Characters() {
 
   }
 
+  function renderCharactersContent() {
+
+    return (
+      <div className={styles.charactersContent}>
+
+      </div>
+    );
+
+  }
+
   return (
     <div id={styles.charactersMain}>
       {renderCharactersBanner()}
+      {renderCharactersContent()}
     </div>
   );
 
