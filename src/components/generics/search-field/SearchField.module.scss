@@ -1,0 +1,21 @@
+.searchFieldMain {
+  display: grid;
+  grid-template-columns: 30px auto;
+  column-gap: 10px;
+  align-items: center;
+  background-color: var(--application-primary-text-color);
+  height: 40px;
+  padding: 2px 20px;
+  border-bottom: 2px solid var(--application-secondary-color);
+
+  .searchIcon {
+    color: var(--application-tertiary-color);
+  }
+
+  .searchFieldControl {
+    font-size: 20px;
+    color: var(--application-tertiary-color);
+    border: none;
+    outline: none;
+  }
+}

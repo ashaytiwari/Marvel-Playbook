@@ -11,3 +11,8 @@ export interface IApplicationCardProps {
   title: string,
   onClick: () => void
 }
+
+export interface ISearchFieldProps {
+  placeholder?: string,
+  onSearch: (value: string) => void
+}

@@ -1,4 +1,5 @@
 import axios from "axios/axios";
+
 import { generateParamsForMarvelApis } from "./utilities";
 
 const PUBLIC_KEY = process.env.REACT_APP_MARVEL_PUBLIC_KEY;
@@ -11,12 +12,20 @@ export const getSampleData = async () => {
   return response;
 };
 
-export const getCharacters = async (limit: number, page: number) => {
+export const getCharacters = async (
+  limit: number,
+  page: number,
+  nameStartsWith?: string
+) => {
   const { timestamp, hash } = generateParamsForMarvelApis();
 
   const offset = limit * page;
 
-  const url = `https://gateway.marvel.com:443/v1/public/characters?ts=${timestamp}&apikey=${PUBLIC_KEY}&hash=${hash}&limit=${limit}&offset=${offset}`;
+  let url = `https://gateway.marvel.com:443/v1/public/characters?ts=${timestamp}&apikey=${PUBLIC_KEY}&hash=${hash}&limit=${limit}&offset=${offset}`;
+
+  if (nameStartsWith) {
+    url += `&nameStartsWith=${nameStartsWith}`;
+  }
 
   const response = await axios.get(url);
 

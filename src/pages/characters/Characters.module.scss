@@ -1,6 +1,6 @@
 #charactersMain {
   display: grid;
-  grid-template-rows: 400px auto;
+  grid-template-rows: max-content auto;
   row-gap: 20px;
 
   .charactersBanner {
@@ -30,6 +30,14 @@
       font-size: 20px;
       margin: 5px 0;
       text-align: center;
+    }
+  }
+
+  .charactersContent {
+
+    .searchFieldContainer {
+      padding: 0 20px;
+      width: 60%;
     }
   }
 
